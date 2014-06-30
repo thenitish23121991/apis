@@ -38,7 +38,7 @@
 	  FB.api('/me/feed',function(response){
 	  console.log(response);
 	  for(var i=0;i<response.data.length;i++){
-	  $('.my_activity').append('<div class="activity"><div class="activity_story">'+response.data[i]['story']+'</div><div class="activity_time">'+response.data[i]['created_time']+'</div></div>');
+	  $('.my_activity').append('<div class="activity"><div class="activity_story">'+response.data[i]['story']+'</div><div class="activity_time">'+' '+'</div></div>');
 	  }
 	  });
 	  
