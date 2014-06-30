@@ -71,7 +71,9 @@
 		
 		FB.api('/me/friends',function(response){
 		
-		console.log(response);
+		for(var i=0;i>response.data.length;i++){
+		$('.my_activity').append('<div class="friend_name">'+response.data[i].name+'</div>');
+		}
 		});
 		
 		});
