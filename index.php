@@ -48,11 +48,9 @@
 		console.log(response);
 				$('.my_activity').html('');
 		for(var i=0;i<response.data.length;i++){
-		for(var j=0;j<response.data[j].images.length;j++){
-	    $('.my_activity').append('<div class="activity"><div class="activity_story"><img src="'+response.data[i].images[j]['source']+'" /></div><div class="activity_time">'+response.data[i]['created_time']+'</div></div>');
+	    $('.my_activity').append('<div class="activity"><div class="activity_story"><img src="'+response.data[i]['source']+'" /></div><div class="activity_time">'+response.data[i]['created_time']+'</div></div>');
 		}
 
-	  }
 		});
 		
 		});
