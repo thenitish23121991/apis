@@ -1,5 +1,7 @@
 <?php
 session_start();
+error_reporting(E_ALL);
+ini_set('display_errors','1');
 $code = "";
 $url = "";
 $client_id = 'faf4debe2fe74963833bd88249c3c9b0';
