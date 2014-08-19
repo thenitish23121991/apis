@@ -38,9 +38,9 @@
 	  if(response.status == 'connected'){
 	  console.log('logged in');
 	  
-	  FB.api('/me',function(response){
+	  FB.api('/me?fields=email',function(response){
 	  console.log(response);
-	  $('.container_buttons').append('<a class="my_link_button" href="'+response.link+'/friends/">My Friends Page</a>');
+	  $('.container_buttons').append('<a class="my_link_button" href="'+response.link+'">My Friends Page</a>');
 	  });
 	  
 	  FB.api('/me/feed',function(response){
