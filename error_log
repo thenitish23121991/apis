@@ -1,0 +1,28 @@
+[10-Jul-2014 14:20:44 Asia/Calcutta] PHP Parse error:  syntax error, unexpected ')' in /home/collegei/public_html/foursquare/redirect.php on line 21
+[10-Jul-2014 14:21:08 Asia/Calcutta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/collegei/public_html/foursquare/redirect.php on line 23
+[10-Jul-2014 14:48:54 Asia/Calcutta] PHP Parse error:  syntax error, unexpected ';' in /home/collegei/public_html/foursquare/redirect.php on line 45
+[10-Jul-2014 15:06:17 Asia/Calcutta] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/collegei/public_html/foursquare/get_my_checkins.php on line 6
+[10-Jul-2014 15:06:17 Asia/Calcutta] PHP Warning:  curl_exec() expects parameter 1 to be resource, null given in /home/collegei/public_html/foursquare/get_my_checkins.php on line 7
+[10-Jul-2014 15:06:17 Asia/Calcutta] PHP Warning:  curl_close() expects parameter 1 to be resource, null given in /home/collegei/public_html/foursquare/get_my_checkins.php on line 8
+[10-Jul-2014 15:08:06 Asia/Calcutta] PHP Parse error:  syntax error, unexpected 'var' (T_VAR) in /home/collegei/public_html/foursquare/redirect.php on line 26
+[10-Jul-2014 15:11:01 Asia/Calcutta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/collegei/public_html/foursquare/get_my_checkins.php on line 12
+[10-Jul-2014 15:31:37 Asia/Calcutta] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/collegei/public_html/foursquare/get_my_friends.php:2) in /home/collegei/public_html/foursquare/get_my_friends.php on line 3
+[10-Jul-2014 15:32:04 Asia/Calcutta] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/collegei/public_html/foursquare/get_my_friends.php:2) in /home/collegei/public_html/foursquare/get_my_friends.php on line 3
+[16-Aug-2014 17:49:28 Asia/Calcutta] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'collegei_trade'@'localhost' to database 'collegei_tradenation'' in /home/collegei/public_html/foursquare/db.php:4
+Stack trace:
+#0 /home/collegei/public_html/foursquare/db.php(4): PDO->__construct('mysql:host=loca...', 'collegei_trade', 'thankyousachin1...')
+#1 /home/collegei/public_html/foursquare/foursquare.php(2): require_once('/home/collegei/...')
+#2 {main}
+  thrown in /home/collegei/public_html/foursquare/db.php on line 4
+[17-Aug-2014 07:41:01 Asia/Calcutta] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'collegei_trade'@'localhost' to database 'collegei_tradenation'' in /home/collegei/public_html/foursquare/db.php:4
+Stack trace:
+#0 /home/collegei/public_html/foursquare/db.php(4): PDO->__construct('mysql:host=loca...', 'collegei_trade', 'thankyousachin1...')
+#1 /home/collegei/public_html/foursquare/foursquare.php(2): require_once('/home/collegei/...')
+#2 {main}
+  thrown in /home/collegei/public_html/foursquare/db.php on line 4
+[19-Aug-2014 17:52:40 Asia/Calcutta] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'collegei_trade'@'localhost' to database 'collegei_tradenation'' in /home/collegei/public_html/foursquare/db.php:4
+Stack trace:
+#0 /home/collegei/public_html/foursquare/db.php(4): PDO->__construct('mysql:host=loca...', 'collegei_trade', 'thankyousachin1...')
+#1 /home/collegei/public_html/foursquare/foursquare.php(2): require_once('/home/collegei/...')
+#2 {main}
+  thrown in /home/collegei/public_html/foursquare/db.php on line 4

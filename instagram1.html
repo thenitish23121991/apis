@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+
+<div class="container">
+
+</div>
+
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+
+$.getJSON('https://api.foursquare.com/v2/venues/search?version=2&?client_id=VDJY1PO1SNWXQ0LBFWFYSMG4BIUPB53JBCG4ZOFTEAWZC32K&client_secret=AUHH5G3YSK0W2KT2ZFYLZ2KYBG52Y1BVISEY0RVF52SFXRRE&ll=44.3,37.2',
+    function(data) {
+        $.each(data.response.venues, function(i,venues){
+            content = '<p>' + venues.name + '</p>';
+            $(content).appendTo("#names");
+       });
+});
+
+
+});
+
+</script>
+
+</body>
+</html>
