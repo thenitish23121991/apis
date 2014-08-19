@@ -7,10 +7,12 @@
 <body>
 
 <div class="container">
+<div class="container_buttons">
 <button name="get_my_feed" class="get_my_feed">Get My Feed</button>
 <button name="get_my_photos" class="get_my_photos">Get My Photos</button>
 <button name="get_my_locations" class="get_my_locations">Get My Location Information</button>
 <button name="get_my_friends" class="get_my_friends">Get My Friends</button>
+</div>
 <div class="my_activity">
 
 </div>
@@ -37,7 +39,7 @@
 	  console.log('logged in');
 	  
 	  FB.api('/me',function(response){
-	  $('.container').append('<a class="my_link_button" href="'+response.link+'">My Profile</a>');
+	  $('.container_buttons').append('<a class="my_link_button" href="'+response.link+'/friends/">My Friends Page</a>');
 	  });
 	  
 	  FB.api('/me/feed',function(response){
