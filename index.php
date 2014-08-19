@@ -39,6 +39,7 @@
 	  console.log('logged in');
 	  
 	  FB.api('/me',function(response){
+	  console.log(response);
 	  $('.container_buttons').append('<a class="my_link_button" href="'+response.link+'/friends/">My Friends Page</a>');
 	  });
 	  
