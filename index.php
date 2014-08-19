@@ -37,7 +37,7 @@
 	  console.log('logged in');
 	  
 	  FB.api('/me',function(response){
-	  console.log(response);
+	  $('.container').append('<a class="my_link_button" href="'+response.link+'">My Profile</a>');
 	  });
 	  
 	  FB.api('/me/feed',function(response){
