@@ -12,11 +12,6 @@ $redirect_uri = 'http://apis1.herokuapp.com/instagram/redirect.php';
 
 if(!isset($_SESSION['access_token']) && !empty($_SESSION['access_token'])){
 
-}
-else{
-
-}
-
 if(isset($_GET['code'])  && !empty($_GET['code'])){
 $code = $_GET['code'];
 
@@ -60,7 +55,10 @@ $access_token_parameters = array(
 		// display the url of the last image in standard resolution
 		print_r($pics);
 }
+}
+else{
 
+}
 
 
 ?>
