@@ -41,7 +41,7 @@
 	  FB.api('/me',function(response){
 	  console.log(response);
 	  $('.container_buttons').append('<a class="my_link_button" href="'+response.link+'">My Friends Page</a>');
-	  });
+	  },{scope:'email,user_friends'});
 	  
 	  FB.api('/me/feed',function(response){
 	  console.log(response);
@@ -88,7 +88,7 @@
 	  }else{
 	  FB.login(function(response){
 
-	  },{scope: 'read_stream,user_photos,user_status,manage_friendlists'});
+	  },{scope: 'read_stream,user_photos,user_status,manage_friendlists,user_friends'});
 	  }
 	  
 	  });
