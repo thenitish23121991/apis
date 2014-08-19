@@ -18,6 +18,8 @@ $code = $_GET['code'];
 
 $_SESSION['code'] = $code;
 
+echo $code;
+
 $url = "https://api.instagram.com/oauth/access_token";
 $access_token_parameters = array(
 'client_id'                =>     $client_id,
