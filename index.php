@@ -41,7 +41,7 @@
 	  FB.api('/me',function(response){
 	  console.log(response);
 	  $('.container_buttons').append('<a class="my_link_button" href="'+response.link+'">My Friends Page</a>');
-	  },{scope:'email,user_friends'});
+	  });
 	  
 	  FB.api('/me/feed',function(response){
 	  console.log(response);
@@ -75,11 +75,9 @@
 		$('.get_my_friends').bind('click',function(){
 		$('.my_activity').html('');
 		
-		FB.api('/me/friendlists',function(response){
+		FB.api('/me',function(response){
 		console.log(response);
-		for(var i=0;i<response.data.length;i++){
-		$('.my_activity').append('<div class="friend_name">'+response.data[i].name+'</div>');
-		}
+		
 		});
 		
 		});
