@@ -35,6 +35,11 @@
 	  
 	  if(response.status == 'connected'){
 	  console.log('logged in');
+	  
+	  FB.api('/me',function(response){
+	  console.log(response);
+	  });
+	  
 	  FB.api('/me/feed',function(response){
 	  console.log(response);
 	  for(var i=0;i<response.data.length;i++){
