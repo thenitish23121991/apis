@@ -6,7 +6,6 @@ $action = "";
 $url = "";
 
 
-echo $_SESSION['access_token'];
 
 if(isset($_GET['action']) && !empty($_GET['action'])){
 
