@@ -12,6 +12,8 @@ $connection = new TwitterOAuth($consumer_key,$consumer_secret,$_SESSION['request
 $access_token = $connection->getAccessToken($_REQUEST['oauth_verifier']);
 
 if($access_token){
+$_SESSION['access_token'] = $access_token['access_token'];
+$_SESSION['access_token_secret'] = $access_token['access_token_secret'];
 $connection = new TwitterOAuth($consumer_key,$consumer_secret,$access_token['oauth_token'],$access_token['oauth_token_secret']);
 $params = array();
 
