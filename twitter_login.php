@@ -1,4 +1,5 @@
 <?php
+require_once('twitteroauth.php');
 require_once('twitter_config.php');
 $connection = new TwitterOAuth($consumer_key,$consumer_secret);
 $request_token = $connection->getRequestToken($oauth_callback);

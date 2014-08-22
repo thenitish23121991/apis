@@ -1,4 +1,5 @@
 <?php
+require_once('twitteroauth.php');
 require_once('twitter_config.php');
 
 if(isset($_GET['oauth_token'])){
