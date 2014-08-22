@@ -17,12 +17,7 @@ $params = array();
 
 $params['include_entities'] = 'false';
 
-$content1 = $connection->get('account/verify_credentials');
-$screen_name = $content1->screen_name;
-$content = $connection->get('statuses/user_timeline',array('screen_name' => $screen_name,'exclude_replies' => 'true','include_rts' => 'false','count' => 20));
-
-print_r($content);
-//header('Location: twitter_content.php');
+header('Location: twitter_content.php');
 }else{
 echo 'Login error';
 }
