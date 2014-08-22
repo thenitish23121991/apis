@@ -2,6 +2,9 @@
 require_once('twitteroauth.php');
 require_once('twitter_config.php');
 
+error_reporting(E_ALL);
+ini_set('display_errors','1');
+
 if(isset($_GET['oauth_token'])){
 
 $connection = new TwitterOAuth($consumer_key,$consumer_secret,$_SESSION['request_token'],$_SESSION['request_token_secret']);
