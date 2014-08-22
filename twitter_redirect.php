@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('twitteroauth.php');
 require_once('twitter_config.php');
 
