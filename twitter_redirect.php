@@ -18,7 +18,7 @@ $params = array();
 $params['include_entities'] = 'false';
 $content = $connection->get('account/verify_credentials',$params);
 
-echo $content;
+print_r($content);
 }else{
 echo 'Login error';
 }
