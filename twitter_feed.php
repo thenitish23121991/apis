@@ -7,10 +7,7 @@ $connection = new TwitterOAuth($consumer_key,$consumer_secret,$_SESSION['oauth_t
 $content = $connection->get('statuses/user_timeline',array('screen_name' => $screen_name,'exclude_replies' => 'true','include_rts' => 'false','count' => 30));
 
 foreach($content as $c){
-echo '<div>'.
-$c['text']
-.'</div>
-<br/>';
+print_r($c);
 }
 
 ?>
