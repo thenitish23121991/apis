@@ -1,5 +1,6 @@
 <?php
 session_start();
+echo $_SESSION['access_token'];
 
 $action_ch = curl_init();
 curl_setopt($action_ch, CURLOPT_SSL_VERIFYPEER, false);
