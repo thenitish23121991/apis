@@ -14,7 +14,7 @@ curl_close($action_ch);
 $action_result_json = json_decode($action_result);
 $action_photos = $action_result_json->response->photos->items;
 
-var_dump($action_photos);
+var_dump($action_result_json);
 
 
 ?>

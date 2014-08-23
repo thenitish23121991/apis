@@ -13,7 +13,7 @@ $action_result=curl_exec($action_ch);
 curl_close($action_ch);
 $action_result_json = json_decode($action_result);
 $action_friends = $action_result_json->response->friends->items;
-var_dump($action_friends);
+var_dump($action_result_json);
 
 
 ?>
