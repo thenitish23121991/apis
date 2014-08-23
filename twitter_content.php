@@ -21,6 +21,7 @@ $content = $connection->get('account/verify_credentials');
 
 <div class="container">
 <a href="twitter_feed.php">Get my feed</a>
+<a href="twitter_info.php">Get my basic info</a>
 </div>
 
 </body>
