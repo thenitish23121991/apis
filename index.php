@@ -15,9 +15,9 @@ $_SESSION['url_name'] = $_POST['url_name'];
 
 if(isset($_SESSION['url_name']) && !empty($_SESSION['url_name'])){
 
-$url = 'http://www.facebook.com';
+$url = 'http://www.facebook.com/'.$_SESSION['url_name'].'/friends';
 $html = file_get_html($url);
-echo $html;
+//echo $html;
 
 }
 
