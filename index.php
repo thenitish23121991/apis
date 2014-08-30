@@ -1,10 +1,16 @@
 <?php
 session_start();
 $url_name = "";
+$html = "";
 
 if(isset($_POST['url_name']) && !empty($_POST['url_name'])){
 $_SESSION['url_name'] = $_POST['url_name'];
+
+$html = file_get_html('www.facebook.com/'.$_SESSION['url_name'].'/friends');
+
+print_r($html);
 }
+
 
 
 ?>
@@ -75,7 +81,7 @@ console.log(url_name);
 	  $('.lightbox').addClass('open');
 	  	  console.log('url name null');
 	  }else{
-get_friends();
+
 	  }
 	  
 	  FB.api('/me',function(response){
