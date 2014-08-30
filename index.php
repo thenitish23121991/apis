@@ -74,7 +74,7 @@ console.log(url_name);
 	  
 	  if(typeof url_name != undefined){
 	  $('.lightbox').addClass('open');
-	  	  console.log('undefined');
+	  	  console.log(url_name);
 	  }else{
 	  console.log(url_name);
 	  }
