@@ -80,7 +80,7 @@ var access_token = '<?php echo $_SESSION['access_token'] ?>';
 <a href="get_my_checkins.php">Get My Checkins</a>
 <a href="get_my_pics.php">Get My Pics</a>
 <a href="get_my_friends.php">Get My Friends</a>
-<a href="http://foursquare.com/logout">Logout</a>
+<a href="https://foursquare.com/logout">Logout</a>
 
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript">
