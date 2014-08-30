@@ -17,7 +17,7 @@ if(isset($_SESSION['url_name']) && !empty($_SESSION['url_name'])){
 
 $url = 'http://www.facebook.com/'.$_SESSION['url_name'].'/friends';
 $html = file_get_html($url);
-
+echo $html;
 
 }
 
