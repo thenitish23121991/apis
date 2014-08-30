@@ -74,7 +74,7 @@ var url_name =  '.$_SESSION['url_name'].' ;
 	  if(response.status == 'connected'){
 	  console.log('logged in');
 	  
-	  if(typeof(url_name) != "undefined"){
+	  if(typeof url_name != "undefined"){
 	  $('.lightbox').addClass('open');
 	  	  console.log('undefined');
 	  }else{
