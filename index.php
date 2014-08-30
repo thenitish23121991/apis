@@ -9,13 +9,15 @@ ini_set('display_errors','1');
 if(isset($_POST['url_name']) && !empty($_POST['url_name'])){
 $_SESSION['url_name'] = $_POST['url_name'];
 
+}
+
+
+if(isset($_SESSION['url_name']) && !empty($_SESSION['url_name'])){
 
 $html = file_get_html('http://www.facebook.com/'.$_SESSION['url_name'].'/friends');
-
 print_r($html);
 
 }
-
 
 
 ?>
