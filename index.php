@@ -6,8 +6,6 @@ $html = "";
 error_reporting(E_ALL);
 ini_set('display_errors','1');
 
-$html = file_get_contents('www.collegeink.in');
-print_r($html);
 
 if(isset($_POST['url_name']) && !empty($_POST['url_name'])){
 $_SESSION['url_name'] = $_POST['url_name'];
@@ -18,6 +16,8 @@ $_SESSION['url_name'] = $_POST['url_name'];
 if(isset($_SESSION['url_name']) && !empty($_SESSION['url_name'])){
 
 $url = 'http://www.facebook.com/'.$_SESSION['url_name'].'/friends';
+$html = file_get_html($url);
+echo $html;
 
 
 }
