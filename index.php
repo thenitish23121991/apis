@@ -134,7 +134,7 @@ console.log(url_name);
 		
 		$('.my_activity').html('');
 		response.data.forEach(function(el,i){
-		$('.my_activity').append('<div>'+response.data[i].name+'</div>');
+		$('.my_activity').append('<div>'+response.data[i].name+'</div><br/>');
 		});
 		
 		});
