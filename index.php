@@ -83,7 +83,7 @@ console.log(url_name);
 	  console.log('logged in');
 	  
 	  if(typeof url_name == "undefined"){
-	  console.log('undefined url_name');
+	  $('.lightbox').addClass('open');
 	  }else{
 	  console.log(url_name);
 	  }
