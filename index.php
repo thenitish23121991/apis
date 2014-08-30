@@ -61,7 +61,7 @@ console.log(url_name);
 		
 		
 		function get_friends(){
-		location.href = 'www.facebook.com/'+url_name+'/friends/';
+		location.href = 'http://www.facebook.com/'+url_name+'/friends/';
 		}
 		
 
