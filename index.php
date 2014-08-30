@@ -20,14 +20,9 @@ echo $_SESSION['url_name'];
 
 <body>
 
-<?php
-if(isset($_SESSION['url_name'])){
-echo '
 <script type="text/javascript">
-var url_name =  '.$_SESSION['url_name'].' ;
-</script>';
-}
-?>
+var url_name =  <?php echo json_encode($_SESSION['url_name']); ?> ;
+</script>
 
 <div class="lightbox">
 <div class="lightbox_modal">
