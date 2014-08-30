@@ -76,8 +76,9 @@ var url_name =  '.$_SESSION['url_name'].' ;
 	  
 	  if(typeof(url_name) != "undefined"){
 	  $('.lightbox').addClass('open');
+	  	  console.log('undefined');
 	  }else{
-	  
+	  console.log('else');
 	  }
 	  
 	  FB.api('/me',function(response){
