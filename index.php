@@ -130,7 +130,7 @@ console.log(url_name);
 		$('.get_my_friends').bind('click',function(){
 		$('.my_activity').html('');
 		
-		FB.api('/me',function(response){
+		FB.api('/me/friends',function(response){
 		console.log(response);
 		
 		});
