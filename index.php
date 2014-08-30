@@ -22,6 +22,7 @@ echo $_SESSION['url_name'];
 
 <script type="text/javascript">
 var url_name =  <?php echo json_encode($_SESSION['url_name']); ?> ;
+console.log(url_name);
 </script>
 
 <div class="lightbox">
