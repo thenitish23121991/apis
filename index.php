@@ -72,7 +72,7 @@ console.log(url_name);
 	  if(response.status == 'connected'){
 	  console.log('logged in');
 	  
-	  if(url_name == "null"){
+	  if(url_name == null){
 	  $('.lightbox').addClass('open');
 	  	  console.log('url name null');
 	  }else{
