@@ -74,7 +74,7 @@ console.log(url_name);
 	  
 	  if(url_name == "null"){
 	  $('.lightbox').addClass('open');
-	  	  console.log('null');
+	  	  console.log('url name null');
 	  }else{
 	  console.log(url_name);
 	  }
