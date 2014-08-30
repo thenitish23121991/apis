@@ -6,6 +6,8 @@ if(isset($_POST['url_name']) && !empty($_POST['url_name'])){
 $_SESSION['url_name'] = $_POST['url_name'];
 }
 
+echo $_SESSION['url_name'];
+
 ?>
 
 
