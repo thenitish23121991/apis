@@ -1,5 +1,7 @@
 <?php
 session_start();
+error_reporting(E_ALL);
+ini_set('display_errors','1');
 
 $action_ch = curl_init();
 curl_setopt($action_ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -11,7 +13,7 @@ curl_close($action_ch);
 $action_result_json = json_decode($action_result);
 $action_photos = $action_result_json->response->photos->items;
 
-var_dump($action_photos);
+var_dump($action_result_json);
 
 
 ?>
