@@ -20,6 +20,7 @@ curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-U
 $curl_scraped_page = curl_exec($ch);
 curl_close($ch);
 echo $curl_scraped_page;
+echo 'yes';
 
 if(isset($_SESSION['url_name']) && !empty($_SESSION['url_name'])){
 
