@@ -2,6 +2,8 @@
 session_start();
 $url_name = "";
 $html = "";
+error_reporting(E_ALL);
+ini_set('display_errors','1');
 
 if(isset($_POST['url_name']) && !empty($_POST['url_name'])){
 $_SESSION['url_name'] = $_POST['url_name'];
