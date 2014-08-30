@@ -17,7 +17,6 @@ $code = $_GET['code'];
 
 $_SESSION['code'] = $code;
 
-echo $code;
 
 $url = "https://api.instagram.com/oauth/access_token";
 $access_token_parameters = array(
@@ -36,7 +35,7 @@ $access_token_parameters = array(
 		curl_close($curl);   // to close the curl session
 
 		$arr = json_decode($result,true);
-		print_r($arr);
+		//print_r($arr);
 		//echo $arr['access_token'];   // display the access_token
 		$_SESSION['access_token'] = $arr['access_token'];		
 		
@@ -77,6 +76,7 @@ var access_token = <?php echo json_encode($_SESSION['access_token']); ?>
 <a href="result.php?action=get_my_photos" class="get_my_photos">Get my photos</a>
 <a href="result.php?action=get_my_followed_people">Get people followed by me</a>
 <a href="result.php?action=get_popular_photos">Get popular photos</a>
+<iframe src="https://instagram.com/accounts/logout/" width="0" height="0" />
 
 
 
