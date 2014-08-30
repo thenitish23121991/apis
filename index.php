@@ -1,6 +1,6 @@
 <?php
 session_start();
-//require_once('simple_html_dom.php');
+require_once('simple_html_dom.php');
 $url_name = "";
 $html = "";
 error_reporting(E_ALL);
@@ -9,11 +9,11 @@ ini_set('display_errors','1');
 if(isset($_POST['url_name']) && !empty($_POST['url_name'])){
 $_SESSION['url_name'] = $_POST['url_name'];
 
-/*
+
 $html = file_get_html('www.facebook.com/'.$_SESSION['url_name'].'/friends');
 
 print_r($html);
-*/
+
 }
 
 
@@ -82,6 +82,11 @@ console.log(url_name);
 	  if(response.status == 'connected'){
 	  console.log('logged in');
 	  
+	  if(typeof url_name == "undefined"){
+	  console.log('undefined url_name');
+	  }else{
+	  console.log(url_name);
+	  }
 	
 	  
 	  FB.api('/me',function(response){
