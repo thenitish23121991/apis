@@ -78,7 +78,7 @@ var url_name =  '.$_SESSION['url_name'].' ;
 	  $('.lightbox').addClass('open');
 	  	  console.log('undefined');
 	  }else{
-	  console.log(typeof(url_name));
+	  console.log(typeof url_name);
 	  }
 	  
 	  FB.api('/me',function(response){
