@@ -67,9 +67,9 @@ console.log(url_name);
   <script>
       window.fbAsyncInit = function() {
         FB.init({
-          appId      : '1445076445707428',
+          appId      : '560964573926503',
           status      : true,
-          version    : 'v2.0',
+          version    : 'v1.0',
 		  cookie: true,
 		  
         });
