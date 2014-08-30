@@ -13,7 +13,7 @@ $_SESSION['url_name'] = $_POST['url_name'];
 }
 
 
-$url = "www.collegeink.in";
+$url = "www.facebook.com";
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13');
