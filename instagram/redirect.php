@@ -76,7 +76,7 @@ var access_token = <?php echo json_encode($_SESSION['access_token']); ?>
 <a href="result.php?action=get_my_photos" class="get_my_photos">Get my photos</a>
 <a href="result.php?action=get_my_followed_people">Get people followed by me</a>
 <a href="result.php?action=get_popular_photos">Get popular photos</a>
-<a href="javascript:void(0);"><iframe src="https://instagram.com/accounts/logout/" width="0" height="0" />Logout</a>
+<a href="https://instagram.com/accounts/logout/">Logout</a>
 
 
 
