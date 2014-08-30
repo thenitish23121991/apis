@@ -8,6 +8,8 @@ $content = $connection->get('account/verify_credentials',array('screen_name' => 
 
 echo 'Screen Name: '.$content->screen_name.'<br/>';
 echo 'Name: '.$content->name.'<br/>';
+echo ''
+
 ?>
 
 <!DOCTYPE html>

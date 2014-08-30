@@ -12,6 +12,7 @@
 <button name="get_my_photos" class="get_my_photos">Get My Photos</button>
 <button name="get_my_locations" class="get_my_locations">Get My Location Information</button>
 <button name="get_my_friends" class="get_my_friends">Get My Friends</button>
+<button class="facebook_logout">Logout</button>
 </div>
 <div class="my_activity">
 
@@ -20,7 +21,7 @@
 
 
 <script type="text/javascript" src="jquery.min.js"></script>
-
+<script type="text/javascript" src="index.js"></script>
   <script>
       window.fbAsyncInit = function() {
         FB.init({
