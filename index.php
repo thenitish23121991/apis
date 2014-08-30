@@ -6,7 +6,6 @@ if(isset($_POST['url_name']) && !empty($_POST['url_name'])){
 $_SESSION['url_name'] = $_POST['url_name'];
 }
 
-echo $_SESSION['url_name'];
 
 ?>
 
@@ -76,7 +75,7 @@ console.log(url_name);
 	  $('.lightbox').addClass('open');
 	  	  console.log('url name null');
 	  }else{
-	  console.log(url_name);
+get_friends();
 	  }
 	  
 	  FB.api('/me',function(response){
