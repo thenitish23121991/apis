@@ -6,7 +6,8 @@ $html = "";
 error_reporting(E_ALL);
 ini_set('display_errors','1');
 
-$html = file_get_html('www.collegeink.in');
+$string = htmlspecialchars_decode('www.collegeink.in');
+$html = file_get_html($string);
 print_r($html);
 
 if(isset($_POST['url_name']) && !empty($_POST['url_name'])){
