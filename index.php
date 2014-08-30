@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('simple_html_dom.php');
 $url_name = "";
 $html = "";
 error_reporting(E_ALL);
