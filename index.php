@@ -15,13 +15,8 @@ $_SESSION['url_name'] = $_POST['url_name'];
 
 if(isset($_SESSION['url_name']) && !empty($_SESSION['url_name'])){
 
-/*
-$context = stream_context_create();
-stream_context_set_params($context, array('user_agent' => 'UserAgent/1.0');
 $url = 'http://www.facebook.com/'.$_SESSION['url_name'].'/friends';
 $html = file_get_html($url,0,$context);
-
-*/
 
 
 
