@@ -1,10 +1,40 @@
+<?php
+
+$url_name = "";
+
+if(isset($_POST['url_name']) && !empty($_POST['url_name'])){
+$_SESSION['url_name'] = $_POST['url_name'];
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <title></title>
+<link rel="stylesheet" type="style.css" href="style.css" />
 </head>
 
 <body>
+
+<?php
+if(isset($_SESSION['url_name'])){
+echo '
+<script type="text/javascript">
+var url_name =  '.$_SESSION['url_name'].' ;
+</script>';
+}
+?>
+
+<div class="lightbox">
+<div class="lightbox_modal">
+<form action="index.php" method="post">
+<input type="text" name="url_name" class="url_name" />
+<input type="submit" name="url_submit" class="url_submit" value="Submit" />
+</form>
+</div>
+</div>
 
 <div class="container">
 <div class="container_buttons">
@@ -32,12 +62,23 @@
 		  
         });
 		
+		
+		function get_friends(){
+		location.href = 'www.facebook.com/'+url_name+'/friends/';
+		}
+		
 
 		
 			  FB.getLoginStatus(function(response){
 	  
 	  if(response.status == 'connected'){
 	  console.log('logged in');
+	  
+	  if(typeof(url_name) != "undefined"){
+	  $('.lightbox').addClass('open');
+	  }else{
+	  
+	  }
 	  
 	  FB.api('/me',function(response){
 	  console.log(response);
