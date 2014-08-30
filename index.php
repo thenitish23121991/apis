@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $url_name = "";
 
 if(isset($_POST['url_name']) && !empty($_POST['url_name'])){
