@@ -114,12 +114,7 @@ console.log(url_name);
 	  });
 	  
 	  		$('.get_my_photos').bind('click',function(){
-			
-			FB.api('/me/home',function(response){
-			console.log(response);
-			});
-		
-		/*
+
 		FB.api('/me/photos',function(response){
 		console.log(response);
 				$('.my_activity').html('');
@@ -128,7 +123,7 @@ console.log(url_name);
 		}
 
 		});
-		*/
+
 		
 		});
 		
