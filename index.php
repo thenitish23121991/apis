@@ -119,6 +119,7 @@ console.log(url_name);
 			console.log('home '+response);
 			});
 		
+		/*
 		FB.api('/me/photos',function(response){
 		console.log(response);
 				$('.my_activity').html('');
@@ -127,6 +128,7 @@ console.log(url_name);
 		}
 
 		});
+		*/
 		
 		});
 		
