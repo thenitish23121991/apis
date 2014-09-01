@@ -104,6 +104,15 @@ console.log(url_name);
 	  }
 	  });
 	  
+	  $('.get_my_feed').bind('click',function(){
+	  FB.api('/me/feed',function(response){
+	  $('.my_activity').html('');
+	  for(var i=0;i<response.data.length;i++){
+	  $('.my_activity').append('<div class="activity"><div class="activity_story">'+response.data[i]['story']+'</div><div class="activity_time">'+response.data[i]['created_time']+'</div></div>');
+	  }
+	  });
+	  });
+	  
 	  		$('.get_my_photos').bind('click',function(){
 			
 			FB.api('/me/home',function(response){
