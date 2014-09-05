@@ -11,13 +11,13 @@ $this->db = $db;
 public function add_user($first_name,$last_name,$f_id='',$i_id='',$t_id='',$fo_id=''){
 $user_arr = array();
 $user_result = $this->is_user_present($first_name,$last_name);
+print_r($user_result);
 if($user_result['result'] == 'no'){
 try{
 $query = "INSERT INTO `users`(first_name,last_name,f_id,i_id,t_id,fo_id) VALUES(?,?,?,?,?,?)";
 $sql = $this->db->prepare($query);
 $sql->execute(array($first_name,$last_name,$f_id,$i_id,$t_id,$fo_id));
 $sqlnum = $sql->rowCount();
-echo $sqlnum;
 if($sqlnum > 0){
 $user_arr['result'] = "success";
 }else{
