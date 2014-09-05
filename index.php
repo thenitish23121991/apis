@@ -162,7 +162,7 @@ console.log(url_name);
 		
 	  }else{
 	  FB.login(function(response){
-
+           
 	  },{scope: 'read_stream,user_photos,user_status,manage_friendlists,user_friends'});
 	  }
 	  
