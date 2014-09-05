@@ -6,6 +6,5 @@ require_once('User.php');
 
 
 $user = new User($con);
-$feed = new Feed($con);
 
 ?>
