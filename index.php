@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('Init.php');
 require_once('simple_html_dom.php');
 $url_name = "";
 $html = "";
@@ -63,6 +64,7 @@ console.log(url_name);
 
 
 <script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="action.js"></script>
 <script type="text/javascript" src="index.js"></script>
   <script>
       window.fbAsyncInit = function() {
@@ -94,6 +96,13 @@ console.log(url_name);
 	  
 	  FB.api('/me',function(response){
 	  console.log(response);
+	  
+	  var first_name = response.first_name;
+	  var last_name = response.last_name;
+	  var f_id = response.id;
+	  
+	  add_facebook_user(first_name,last_name,f_id);
+	  
 	  $('.container_buttons').append('<a class="my_link_button" href="'+response.link+'">My Friends Page</a>');
 	  });
 	  
