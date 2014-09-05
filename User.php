@@ -17,6 +17,7 @@ $query = "INSERT INTO `users`(first_name,last_name,f_id,i_id,t_id,fo_id) VALUES(
 $sql = $this->db->prepare($query);
 $sql->execute(array($first_name,$last_name,$f_id,$i_id,$t_id,$fo_id));
 $sqlnum = $sql->rowCount();
+echo $sqlnum;
 if($sqlnum > 0){
 $user_arr['result'] = "success";
 }else{
