@@ -47,17 +47,15 @@ $post = $_POST['post'];
 $time = $_POST['post_time'];
 $user_id = $_POST['user_id'];
 $source = $_POST['source'];
-$social_arr = $user->add_post($post,$user_id,$time,$source,);
+$social_arr = $user->add_post($post,$user_id,$time,$source);
 return $social_arr;
 break;
 
 
 case 'get_facebook_id':
-echo 'get facebook id';
-/*
+$fb_id = $_POST['fb_id'];
 $social_arr = $user->get_facebook_id($fb_id);
 return $social_arr;
-*/
 break;
 }
 
