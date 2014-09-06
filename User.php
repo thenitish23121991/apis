@@ -92,7 +92,7 @@ return $user_arr;
 }
 
 
-public function get_facebook_id($f_id){
+public function get_facebook_id($fb_id){
 $user_id = "";
 try{
 $query = "SELECT * FROM `users` WHERE f_id=?";
