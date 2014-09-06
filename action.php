@@ -47,7 +47,7 @@ $post = $_POST['post'];
 $time = $_POST['post_time'];
 $user_id = $_POST['user_id'];
 $source = $_POST['source'];
-$social_arr = $user->add_post($post,$user_id,$time,$source);
+$social_arr = $user->add_feed_item($post,$user_id,$time,$source);
 return $social_arr;
 break;
 
