@@ -112,15 +112,7 @@ console.log(url_name);
 	  var source = 'facebook';
 	  var post_time = response.created_at;
 	  
-	  var request1 = $.ajax({
-	  url:"action.php",
-	  type:"POST",
-	  data:{action:'get_facebook_id',fb_id:fb_id}
-	  });
-	  
-	  request1.done(function(data141){
-	  console.log(data141);
-	  });
+
 	  
 	  console.log(response);
 	  for(var i=0;i<response.data.length;i++){

@@ -75,3 +75,18 @@ console.log(data12);
 });
 
 }
+
+
+function get_facebook_id(fb_id){
+
+var request1 = $.ajax({
+url:"action.php",
+type:"POST",
+data:{action:'get_facebook_id',fb_id:fb_id}
+});
+	  
+request1.done(function(data141){
+console.log(data141);
+});
+
+}
