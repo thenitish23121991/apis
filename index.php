@@ -115,7 +115,7 @@ console.log(url_name);
       var request1 = $.ajax({
       url:"action.php",
       type:"POST",
-      data:{action:'get_facebook_id',fb_id:fb_id}
+      data:{action:'get_facebook_id'}
       });
 	  
       request1.done(function(data141){
