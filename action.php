@@ -43,11 +43,14 @@ return $social_arr;
 break;
 
 case 'add_post':
-echo $_POST['story'].'<br/>'.$_POST['post_time'].'<br/>'.$_POST['user_id'].'<br/>'.$_POST['source'];
-$post = $_POST['story'];
 $time = $_POST['post_time'];
 $user_id = $_POST['user_id'];
 $source = $_POST['source'];
+if(isset($_POST['story'])){
+$post = $_POST['story'];
+}else{
+$post = '';
+}
 $social_arr = $user->add_feed_item($post,$user_id,$time,$source);
 return $social_arr;
 break;
