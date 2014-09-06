@@ -67,7 +67,7 @@ var action = 'add_post';
 var request = $.ajax({
 url:"action.php",
 type:"POST",
-data:{action:action,first_name:first_name,last_name:last_name}
+data:{action:'add_post',post:post,post_time:post_time,user_id:user_id,source:source}
 });
 
 request.done(function(data12){
