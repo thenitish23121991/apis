@@ -53,7 +53,6 @@ break;
 
 
 case 'get_facebook_id':
-$fb_id = $_POST['fb_id'];
 echo 'get facebook id';
 /*
 $social_arr = $user->get_facebook_id($fb_id);
