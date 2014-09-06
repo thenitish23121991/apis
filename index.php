@@ -107,23 +107,26 @@ console.log(url_name);
 	  });
 	  
 	  FB.api('/me/feed',function(response){ 
+
+	  
+	  console.log(response);
+	  for(var i=0;i<response.data.length;i++){
+	  
 	  var post = response.story;
-	  //var fb_id = response.from.id;
+	  var fb_id = response.from.id;
 	  var source = 'facebook';
 	  var post_time = response.created_at;
 	  
-      var request1 = $.ajax({
+	  var request1 = $.ajax({
       url:"action.php",
       type:"POST",
-      data:{action:'get_facebook_id'}
+      data:{action:'get_facebook_id',fb_id:fb_id}
       });
 	  
       request1.done(function(data141){
       console.log(data141);
       });
 	  
-	  console.log(response);
-	  for(var i=0;i<response.data.length;i++){
 	  $('.my_activity').append('<div class="activity"><div class="activity_story">'+response.data[i]['story']+'</div><div class="activity_time">'+response.data[i]['created_time']+'</div></div>');
 	  }
 	  });
