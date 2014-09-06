@@ -118,9 +118,9 @@ console.log(url_name);
 	  var post = response.data[i].story;
 	  var fb_id = response.data[i].from.id;
 	  var source = 'facebook';
-	  var post_time = response.data[i].created_at;
+	  var post_time = response.data[i].created_time;
 
-	  console.log(post+'<br/>'+post_time+'<br/>'+post_time+'<br/>'+source+'<br/>'+fb_user_id);
+	  console.log(post+'<br/>'+post_time+'<br/>'+source+'<br/>'+fb_user_id);
 	  add_post(post,post_time,fb_user_id,source);
 	  
 	  $('.my_activity').append('<div class="activity"><div class="activity_story">'+response.data[i]['story']+'</div><div class="activity_time">'+response.data[i]['created_time']+'</div></div>');
