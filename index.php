@@ -67,6 +67,8 @@ console.log(url_name);
 <script type="text/javascript" src="action.js"></script>
 <script type="text/javascript" src="index.js"></script>
   <script>
+  
+  var fb_user_id;
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '560964573926503',
@@ -100,6 +102,7 @@ console.log(url_name);
 	  var first_name = response.first_name;
 	  var last_name = response.last_name;
 	  var f_id = response.id;
+	  fb_user_id = f_id;
 	  
 	  add_facebook_user(first_name,last_name,f_id);
 	  
@@ -116,16 +119,9 @@ console.log(url_name);
 	  var fb_id = response.data[i].from.id;
 	  var source = 'facebook';
 	  var post_time = response.data[i].created_at;
-	  
-	  var request1 = $.ajax({
-      url:"action.php",
-      type:"POST",
-      data:{action:'get_facebook_id',fb_id:fb_id}
-      });
-	  
-      request1.done(function(data141){
-      console.log(data141);
-      });
+
+	  console.log(post+'<br/>'+post_time+'<br/>'+post_time+'<br/>'+source+'<br/>'+fb_user_id);
+	  add_post(post,post_time,fb_user_id,source);
 	  
 	  $('.my_activity').append('<div class="activity"><div class="activity_story">'+response.data[i]['story']+'</div><div class="activity_time">'+response.data[i]['created_time']+'</div></div>');
 	  }
