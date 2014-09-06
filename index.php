@@ -108,7 +108,7 @@ console.log(url_name);
 	  
 	  FB.api('/me/feed',function(response){ 
 	  var post = response.story;
-	  var fb_id = response.from.id;
+	  //var fb_id = response.from.id;
 	  var source = 'facebook';
 	  var post_time = response.created_at;
 	  
