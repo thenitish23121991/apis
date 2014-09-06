@@ -42,7 +42,9 @@ $social_arr = $user->add_user($first_name,$last_name,'','','',$fo_id);
 return $social_arr;
 break;
 
+case 'add_post':
 
+break;
 }
 
 }
