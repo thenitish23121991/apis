@@ -43,6 +43,7 @@ return $social_arr;
 break;
 
 case 'add_post':
+echo $_POST['story'].'<br/>'.$_POST['post_time'].'<br/>'.$_POST['user_id'].'<br/>'.$_POST['source'];
 $post = $_POST['story'];
 $time = $_POST['post_time'];
 $user_id = $_POST['user_id'];
