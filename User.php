@@ -104,7 +104,7 @@ while($data = $sql->fetch(PDO::FETCH_ASSOC)){
 $user_id = $data['id'];
 }
 }else{
-
+$user_id = "not found";
 }
 }
 catch(PDOException $e){
