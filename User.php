@@ -32,12 +32,12 @@ return $user_arr;
 }
 
 
-public function add_feed_item($user_id,$source,$link,$location,$post_friends){
+public function add_feed_item($post,$user_id,$post_time,$source,$link='',$location='',$post_friends=''){
 $user_arr = array();
 try{
-$query = "INSERT INTO `users`(first_name,last_name,f_id,i_id,t_id,fo_id) VALUES(?,?,?,?,?,?)";
+$query = "INSERT INTO `posts`(post,user_id,post_time,source) VALUES(?,?,?,?,?,?)";
 $sql = $this->db->prepare($query);
-$sql->execute(array($first_name,$last_name,$f_id,$i_id,$t_id,$fo_id));
+$sql->execute(array($post,$user_id,$post_time,$source));
 $sqlnum = $sql->rowCount();
 if($sqlnum > 0){
 $user_arr['result'] = "success";
@@ -91,6 +91,27 @@ $e->getMessage();
 return $user_arr;
 }
 
+
+public function get_facebook_id($f_id){
+$user_id = "";
+try{
+$query = "SELECT * FROM `users` WHERE f_id=?";
+$sql = $this->db->prepare($query);
+$sql->execute(array($fb_id));
+$sqlnum = $sql->rowCount();
+if($sqlnum > 0){
+while($data = $sql->fetch(PDO::FETCH_ASSOC)){
+$user_id = $data['id'];
+}
+}else{
+
+}
+}
+catch(PDOException $e){
+$e->getMessage();
+}
+return $user_id;
+}
 
 
 }

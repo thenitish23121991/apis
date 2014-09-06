@@ -60,7 +60,9 @@ console.log(data12);
 }
 
 
-function add_post(){
+function add_post(post,post_time,user_id,source){
+
+var action = 'add_post';
 
 var request = $.ajax({
 url:"action.php",
