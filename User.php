@@ -94,6 +94,7 @@ return $user_arr;
 
 public function get_facebook_id($fb_id){
 $user_id = "";
+echo $fb_id;
 try{
 $query = "SELECT * FROM `users` WHERE f_id=?";
 $sql = $this->db->prepare($query);
