@@ -112,7 +112,7 @@ console.log(url_name);
 	  var source = 'facebook';
 	  var post_time = response.created_at;
 	  
-
+      get_facebook_id(fb_id);
 	  
 	  console.log(response);
 	  for(var i=0;i<response.data.length;i++){
