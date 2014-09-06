@@ -112,10 +112,10 @@ console.log(url_name);
 	  console.log(response);
 	  for(var i=0;i<response.data.length;i++){
 	  
-	  var post = response.story;
-	  var fb_id = response.from.id;
+	  var post = response.data[i].story;
+	  var fb_id = response.data[i].from.id;
 	  var source = 'facebook';
-	  var post_time = response.created_at;
+	  var post_time = response.data[i].created_at;
 	  
 	  var request1 = $.ajax({
       url:"action.php",
