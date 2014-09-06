@@ -63,6 +63,7 @@ console.log(data12);
 function add_post(story,post_time,user_id,source){
 
 var action = 'add_post';
+console.log('add post '+story);
 
 var request = $.ajax({
 url:"action.php",

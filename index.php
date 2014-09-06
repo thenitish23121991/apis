@@ -119,7 +119,7 @@ console.log(url_name);
 	  var fb_id = response.data[i].from.id;
 	  var source = 'facebook';
 	  var post_time = response.data[i].created_time;
-
+      console.log(story);
 	  add_post(story,post_time,fb_user_id,source);
 	  
 	  $('.my_activity').append('<div class="activity"><div class="activity_story">'+response.data[i]['story']+'</div><div class="activity_time">'+response.data[i]['created_time']+'</div></div>');
