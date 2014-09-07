@@ -14,9 +14,9 @@ curl_setopt($action_ch, CURLOPT_URL,$action_url);
 $action_result=curl_exec($action_ch);
 curl_close($action_ch);
 $action_result_json = json_decode($action_result);
-var_dump($action_result_json);
+//var_dump($action_result_json);
 
-$first_name = $action_result_json->user->firstName;
+$first_name = $action_result_json->response->user->firstName;
 $last_name = $action_result_json->user->lastName;
 $fo_id = $action_result_json->user->id;
 
