@@ -25,7 +25,7 @@ $result_json = json_decode($result);
 
 $access_token = $result_json->access_token;
 
-$_SESSION['access_token'] = $access_token;
+$_SESSION['foursquare_access_token'] = $access_token;
 
 
 
@@ -73,7 +73,7 @@ print_r($action_result_json);
 <body>
 
 <script type="text/javascript">
-var access_token = '<?php echo $_SESSION['access_token'] ?>';
+var access_token = '<?php echo $_SESSION['foursquare_access_token'] ?>';
 </script>
 
 
