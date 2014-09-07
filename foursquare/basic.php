@@ -1,6 +1,8 @@
 <?php
 session_start();
-require_once('Init.php');
+require_once('../Init.php');
+error_reporting(E_ALL);
+ini_set('display_errors','1');
 $code = "";
 $access_token = "";
 
