@@ -8,7 +8,13 @@ $connection = new TwitterOAuth($consumer_key,$consumer_secret,$_SESSION['oauth_t
 $content = $connection->get('statuses/user_timeline',array('exclude_replies' => 'true','include_rts' => 'false','count' => 30));
 
 foreach($content as $c){
-print_r($c).'<br/><br/><br/>';
+$post = $c->text;
+$user_id = $c->user->id;
+$post_time = $c->created_at;
+$source = 'twitter';
+
+$feed_item = $user->add_feed_item($post,$user_id,$post_time,$source);
+
 echo '<div><div>'.
 $c->user->screen_name
 .'</div>
