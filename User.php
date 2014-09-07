@@ -58,8 +58,8 @@ try{
 $query = "INSERT INTO `posts`(post,user_id,post_time,source) VALUES(?,?,?,?)";
 $sql = $this->db->prepare($query);
 $sql->execute(array($post,$user_id,$post_time,$source));
-echo $sqlnum;
 $sqlnum = $sql->rowCount();
+echo $sqlnum;
 if($sqlnum > 0){
 $user_arr['result'] = "success";
 }else{
