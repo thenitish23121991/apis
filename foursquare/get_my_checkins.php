@@ -6,7 +6,7 @@ ini_set('display_errors','1');
 $action_ch = curl_init();
 curl_setopt($action_ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($action_ch, CURLOPT_RETURNTRANSFER, true);
-$action_url = 'https://api.foursquare.com/v2/users/self/checkins?oauth_token='.$_SESSION['access_token'].'&v=20130815&limit=100';
+$action_url = 'https://api.foursquare.com/v2/users/self/checkins?oauth_token='.$_SESSION['foursquare_access_token'].'&v=20130815&limit=100';
 curl_setopt($action_ch, CURLOPT_URL,$action_url);
 $action_result=curl_exec($action_ch);
 curl_close($action_ch);
