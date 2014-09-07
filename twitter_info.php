@@ -16,7 +16,7 @@ $first_name = $name_arr[0];
 $last_name = $name_arr[1];
 $t_id = $content->id;
 
-$user->add_user($first_name,$last_name,'','',$t_id,'');
+$user->add_user($first_name,$last_name,'twitter','','',$t_id,'');
 
 
 ?>
