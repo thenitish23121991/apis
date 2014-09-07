@@ -20,9 +20,6 @@ $first_name = $action_result_json->response->user->firstName;
 $last_name = $action_result_json->response->user->lastName;
 $fo_id = $action_result_json->response->user->id;
 
-echo $first_name;
-echo $last_name;
-echo $fo_id;
 
 $user->add_user($first_name,$last_name,'foursquare','','','',$fo_id);
 
