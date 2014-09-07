@@ -52,10 +52,12 @@ $action_result_json = json_decode($action_result);
 }
 }
 
-
-
 print_r($action_result_json);
 */
+
+if(!isset($_SESSION['user'])){
+header('Location: basic.php');
+}
 
 ?>
 

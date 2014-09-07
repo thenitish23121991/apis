@@ -22,6 +22,8 @@ $fo_id = $action_result_json->response->user->id;
 
 
 $user->add_user($first_name,$last_name,'foursquare','','','',$fo_id);
+$_SESSION['user'] = $fo_id;
 
+header('Location: redirect.php');
 
 ?>
