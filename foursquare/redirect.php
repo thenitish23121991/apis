@@ -25,7 +25,7 @@ $result_json = json_decode($result);
 
 $access_token = $result_json->access_token;
 $_SESSION['foursquare_access_token'] = $access_token;
-
+print_r($result_json);
 
 /*
 
