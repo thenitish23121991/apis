@@ -165,7 +165,8 @@ console.log(url_name);
 		
 		$('.my_activity').html('');
 		response.data.forEach(function(el,i){
-		console.log(response.data[i].id);
+		var friend_id = response.data[i].id;
+		add_friends_list(fb_user_id,friend_id,'facebook');
 		$('.my_activity').append('<div>'+response.data[i].name+'</div><br/>');
 		});
 		
