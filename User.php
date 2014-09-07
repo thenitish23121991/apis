@@ -48,7 +48,7 @@ $user_arr['result'] = "nosuccess";
 catch(PDOException $e){
 $e->getMessage();
 }
-echo $user_arr['result'];
+echo $post.'<br/>'.$user_id.'<br/>'.$post_time.'<br/>'.$source;
 return $user_arr;
 }
 
