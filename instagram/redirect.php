@@ -35,6 +35,7 @@ $access_token_parameters = array(
 		curl_close($curl);   // to close the curl session
 
 		$arr = json_decode($result,true);
+		print_r($arr);
 		//print_r($arr);
 		//echo $arr['access_token'];   // display the access_token
 		$_SESSION['access_token'] = $arr['access_token'];		
