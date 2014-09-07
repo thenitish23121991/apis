@@ -46,8 +46,7 @@ $url = 'https://api.instagram.com/v1/media/popular?access_token='.$_SESSION['acc
 		
 		if($action == 'get_my_followed_people'){
 		foreach($pics['data'] as $p){
-		print_r($p);
-		echo '<div><img src="'.$p['profile_picture'].'" />'.$p['first_name'].'('.$p['username'].')</div>';
+		echo '<div><img src="'.$p['profile_picture'].'" />'.$p['full_name'].'('.$p['username'].')</div>';
 		}
 		}
 		
