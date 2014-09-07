@@ -11,7 +11,7 @@ $code = $_GET['code'];
 $_SESSION['code'] = $code;
 
 
-$login_url = 'https://foursquare.com/oauth2/access_token?client_id=K2FDDKAO3KNK5Q0V1QCAPR2K02L0SEPOYO4ZMWS4AU0KM2M3&client_secret=AUHH5G3YSK0W2KT2ZFYLZ2KYBG52Y1BVISEY0RVF52SFXRRE&grant_type=authorization_code&redirect_uri=http://apis1.herokuapp.com/foursquare/redirect.php&code='.$_SESSION['code'];
+$login_url = 'https://foursquare.com/oauth2/access_token?client_id=VDJY1PO1SNWXQ0LBFWFYSMG4BIUPB53JBCG4ZOFTEAWZC32K&client_secret=AUHH5G3YSK0W2KT2ZFYLZ2KYBG52Y1BVISEY0RVF52SFXRRE&grant_type=authorization_code&redirect_uri=http://apis1.herokuapp.com/foursquare/redirect.php&code='.$_SESSION['code'];
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -24,7 +24,6 @@ curl_close($ch);
 $result_json = json_decode($result);
 
 $access_token = $result_json->access_token;
-echo $access_token;
 $_SESSION['foursquare_access_token'] = $access_token;
 
 echo $_SESSION['foursquare_access_token'];
