@@ -55,9 +55,9 @@ return $user_arr;
 public function add_feed_item($post,$user_id,$post_time,$source,$link='',$location='',$post_friends=''){
 $user_arr = array();
 try{
-$query = "INSERT INTO `posts`(post,user_id,post_time,source) VALUES(?,?,?,?)";
+$query = "INSERT INTO `posts`(post,user_id,source) VALUES(?,?,?)";
 $sql = $this->db->prepare($query);
-$sql->execute(array($post,$user_id,$post_time,$source));
+$sql->execute(array($post,$user_id,$source));
 $sqlnum = $sql->rowCount();
 echo $sqlnum;
 if($sqlnum > 0){
