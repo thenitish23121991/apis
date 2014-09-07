@@ -5,7 +5,7 @@ require_once('twitter_config.php');
 require_once('Init.php');
 
 $connection = new TwitterOAuth($consumer_key,$consumer_secret,$_SESSION['oauth_token'],$_SESSION['oauth_token_secret']);
-$content = $connection->get('account/verify_credentials',array('screen_name' => $screen_name,'exclude_replies' => 'true','include_rts' => 'false','count' => 30));
+$content = $connection->get('account/verify_credentials',array('exclude_replies' => 'true','include_rts' => 'false','count' => 30));
 
 echo 'Screen Name: '.$content->screen_name.'<br/>';
 echo 'Name: '.$content->name.'<br/>';
