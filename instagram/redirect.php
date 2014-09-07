@@ -1,6 +1,7 @@
 <?php
 session_start();
 error_reporting(E_ALL);
+require_once('../Init.php');
 ini_set('display_errors','1');
 $code = "";
 $url = "";
@@ -36,6 +37,13 @@ $access_token_parameters = array(
 
 		$arr = json_decode($result,true);
 		print_r($arr);
+		
+		$first_name = $arr['user']['full_name'];
+		$last_name = '';
+		$source = 'instagram';
+		$i_id = $arr['user']['id'];
+		$user->add_user($first_name,$last_name,$source,'',$i_id,'','');
+		
 		//print_r($arr);
 		//echo $arr['access_token'];   // display the access_token
 		$_SESSION['access_token'] = $arr['access_token'];		
