@@ -16,9 +16,11 @@ curl_close($action_ch);
 $action_result_json = json_decode($action_result);
 var_dump($action_result_json);
 
-$first_name = $action_result_json['user']['firstName'];
-$last_name = $action_result_json['user']['lastName'];
-$fo_id = $action_result_json['user']['fo_id'];
+$first_name = $action_result_json->user->firstName;
+$last_name = $action_result_json->user->lastName;
+$fo_id = $action_result_json->user->id;
+
+echo $first_name;
 
 $user->add_user($first_name,$last_name,'foursquare','','','',$fo_id);
 
