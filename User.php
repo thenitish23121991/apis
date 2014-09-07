@@ -10,7 +10,7 @@ $this->db = $db;
 
 public function add_user($first_name,$last_name,$source,$f_id='',$i_id='',$t_id='',$fo_id=''){
 $user_arr = array();
-$user_result = $this->is_user_present($first_name,$last_name);
+$user_result = $this->is_user_present($first_name,$last_name,$source);
 if($user_result['result'] == 'no'){
 try{
 $query = "INSERT INTO `users`(first_name,last_name,source,f_id,i_id,t_id,fo_id) VALUES(?,?,?,?,?,?,?)";
