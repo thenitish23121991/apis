@@ -74,12 +74,12 @@ return $user_arr;
 
 
 
-public function add_friends_list($user_id,$friend_id){
+public function add_friends_list($user_id,$friend_id,$source){
 $user_arr = array();
 try{
-$query = "INSERT INTO `friends`(user_id,friend_id) VALUES(?,?,)";
+$query = "INSERT INTO `friends`(user_id,friend_id,source) VALUES(?,?,?)";
 $sql = $this->db->prepare($query);
-$sql->execute(array($user_id,$friend_id));
+$sql->execute(array($user_id,$friend_id,$source));
 $sqlnum = $sql->rowCount();
 if($sqlnum > 0){
 $user_arr['result'] = "success";

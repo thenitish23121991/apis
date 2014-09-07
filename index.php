@@ -165,6 +165,7 @@ console.log(url_name);
 		
 		$('.my_activity').html('');
 		response.data.forEach(function(el,i){
+		console.log(response.data.id);
 		$('.my_activity').append('<div>'+response.data[i].name+'</div><br/>');
 		});
 		

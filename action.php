@@ -62,6 +62,15 @@ $fb_id = $_POST['fb_id'];
 $social_arr = $user->get_facebook_id($fb_id);
 return $social_arr;
 break;
+
+
+case 'add_friends_list':
+$friend_id = $_POST['friend_id'];
+$user_id = $_POST['user_id'];
+$source = $_POST['source'];
+$social_arr = $user->add_friends_list($user_id,$friend_id,$source);
+return $social_arr;
+break;
 }
 
 }

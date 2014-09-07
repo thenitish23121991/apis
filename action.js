@@ -76,6 +76,20 @@ console.log(data12);
 
 }
 
+function add_friends_list(user_id,friend_id,source){
+
+var request = $.ajax({
+url:"action.php",
+type:"POST",
+data:{action:'add_friends_list',user_id:user_id,friend_id:friend_id,source:source}
+});
+
+request.done(function(data13){
+console.log(data13);
+});
+
+}
+
 
 function get_facebook_id(fb_id){
 
