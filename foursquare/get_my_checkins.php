@@ -10,6 +10,7 @@ $action_url = 'https://api.foursquare.com/v2/users/self/checkins?oauth_token='.$
 curl_setopt($action_ch, CURLOPT_URL,$action_url);
 $action_result=curl_exec($action_ch);
 curl_close($action_ch);
+print_r($action_result);
 $action_result_json = json_decode($action_result);
 $action_checkins = $action_result_json->response->checkins->items;
 var_dump($action_result_json);
