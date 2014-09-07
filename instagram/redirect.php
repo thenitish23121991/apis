@@ -60,7 +60,7 @@ $access_token_parameters = array(
 		$pics = json_decode($pictures,true);
 
 		// display the url of the last image in standard resolution
-		print_r($pics);
+		//print_r($pics);
 }
 }
 else{
