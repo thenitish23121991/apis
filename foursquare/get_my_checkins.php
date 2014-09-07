@@ -3,6 +3,8 @@ session_start();
 error_reporting(E_ALL);
 ini_set('display_errors','1');
 
+echo $_SESSION['foursquare_access_token'];
+
 $action_ch = curl_init();
 curl_setopt($action_ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($action_ch, CURLOPT_RETURNTRANSFER, true);
