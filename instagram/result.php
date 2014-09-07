@@ -37,6 +37,7 @@ $url = 'https://api.instagram.com/v1/media/popular?access_token='.$_SESSION['acc
 		if($action == 'get_popular_photos' || $action == 'get_my_photos'){
 		//$image_id = "";
 		foreach($pics['data'] as $p){
+		print_r($p);
 		$image_id = $p['id'];
 		echo '<a href="image.php?id='.$image_id.'"><img src="'.$p['images']['standard_resolution']['url'].'" /></a>';
 		}
@@ -45,6 +46,7 @@ $url = 'https://api.instagram.com/v1/media/popular?access_token='.$_SESSION['acc
 		
 		if($action == 'get_my_followed_people'){
 		foreach($pics['data'] as $p){
+		print_r($p);
 		echo '<div><img src="'.$p['profile_picture'].'" />'.$p['first_name'].'('.$p['username'].')</div>';
 		}
 		}
