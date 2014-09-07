@@ -104,7 +104,7 @@ console.log(url_name);
 	  var f_id = response.id;
 	  fb_user_id = f_id;
 	  
-	  add_facebook_user(first_name,last_name,f_id);
+	  add_facebook_user(first_name,last_name,'facebook',f_id);
 	  
 	  $('.container_buttons').append('<a class="my_link_button" href="'+response.link+'">My Friends Page</a>');
 	  });

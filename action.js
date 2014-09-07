@@ -5,7 +5,7 @@ function add_facebook_user(first_name,last_name,f_id){
 var request = $.ajax({
 url:"action.php",
 type:"POST",
-data:{action:'add_facebook_user',first_name:first_name,last_name:last_name,f_id:f_id}
+data:{action:'add_facebook_user',first_name:first_name,last_name:last_name,f_id:f_id,source:'facebook'}
 });
 
 request.done(function(data12){
