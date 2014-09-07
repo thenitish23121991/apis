@@ -53,7 +53,6 @@ $post = $_POST['story'];
 $post = '';
 }
 $social_arr = $user->add_feed_item($post,$user_id,$time,$source);
-print_r($social_arr);
 return $social_arr;
 break;
 
