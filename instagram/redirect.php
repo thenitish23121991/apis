@@ -36,7 +36,6 @@ $access_token_parameters = array(
 		curl_close($curl);   // to close the curl session
 
 		$arr = json_decode($result,true);
-		print_r($arr);
 		
 		$first_name = $arr['user']['full_name'];
 		$last_name = '';
