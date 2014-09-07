@@ -15,7 +15,7 @@ if($user_result['result'] == 'no'){
 try{
 $query = "INSERT INTO `users`(first_name,last_name,source,f_id,i_id,t_id,fo_id) VALUES(?,?,?,?,?,?,?)";
 $sql = $this->db->prepare($query);
-$sql->execute(array($first_name,$last_name,$source_name,$f_id,$i_id,$t_id,$fo_id));
+$sql->execute(array($first_name,$last_name,$source,$f_id,$i_id,$t_id,$fo_id));
 $sqlnum = $sql->rowCount();
 if($sqlnum > 0){
 $user_arr['result'] = "success";
